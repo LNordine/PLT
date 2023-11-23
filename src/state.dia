@@ -2903,7 +2903,11 @@
         <dia:point val="40.5,-2.425"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
+<<<<<<< HEAD
         <dia:rectangle val="40.45,-2.475;47.2103,3.225"/>
+=======
+        <dia:rectangle val="40.55,-0.375;47.3103,5.325"/>
+>>>>>>> 814beb0 (Engine et state DIA)
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="40.5,-2.425"/>
@@ -3111,19 +3115,33 @@
       </dia:attribute>
       <dia:attribute name="obj_bb">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:rectangle val="36.059,-0.81352;40.4996,1.23"/>
 =======
         <dia:rectangle val="35.909,0.48648;40.5996,2.93"/>
 >>>>>>> f8eb613 (fixing query methods)
+=======
+        <dia:rectangle val="35.909,0.48648;40.5996,2.93"/>
+=======
+        <dia:rectangle val="35.909,0.48648;40.5996,3.33"/>
+>>>>>>> b7e953a (Engine et state DIA)
+>>>>>>> 814beb0 (Engine et state DIA)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
+<<<<<<< HEAD
         <dia:point val="36.809,-0.06352"/>
         <dia:point val="38.9793,-0.06352"/>
         <dia:point val="38.9793,0.375"/>
         <dia:point val="40.4496,0.375"/>
+=======
+        <dia:point val="36.659,1.23648"/>
+        <dia:point val="38.9543,1.23648"/>
+        <dia:point val="38.9543,2.475"/>
+        <dia:point val="40.5496,2.475"/>
+>>>>>>> 814beb0 (Engine et state DIA)
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -3185,7 +3203,11 @@
         <dia:color val="#000000ff"/>
       </dia:attribute>
       <dia:connections>
+<<<<<<< HEAD
         <dia:connection handle="0" to="O1" connection="44"/>
+=======
+        <dia:connection handle="0" to="O1" connection="40"/>
+>>>>>>> 814beb0 (Engine et state DIA)
         <dia:connection handle="1" to="O10" connection="16"/>
       </dia:connections>
       <dia:childnode parent="O0"/>
