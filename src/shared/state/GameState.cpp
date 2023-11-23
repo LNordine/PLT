@@ -51,10 +51,17 @@ namespace state {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     Phase GameState::getGamePhase() {
 =======
     GamePhase GameState::getGamePhase() const{
 >>>>>>> f8eb613 (fixing query methods)
+=======
+    GamePhase GameState::getGamePhase() const{
+=======
+    Phase GameState::getGamePhase() {
+>>>>>>> 736875c (Compilation ENGINE)
+>>>>>>> 2d937c1 (Compilation ENGINE)
         return this->gamePhase;
     }
 
