@@ -1,6 +1,6 @@
 // Engine.cpp
 #include "Engine.h"
-#include "Command.h"
+
 
 #include "Command.h"
 
@@ -20,7 +20,10 @@ namespace engine {
 
   // Initialization method
   void Engine::init() {
+<<<<<<< HEAD
     
+=======
+>>>>>>> c6ddbd7 (Engine.cpp ne compile pas)
     // Perform initialization tasks here
   }
 
@@ -30,6 +33,7 @@ namespace engine {
   }
 
   // Add a command to the list of commands
+<<<<<<< HEAD
   
   void Engine::addCommand (std::unique_ptr<Command> cmd){
 
@@ -45,6 +49,13 @@ namespace engine {
   }
 
 
+=======
+  void Engine::addCommand(std::unique_ptr<Command> cmd) {
+    // Add the unique command to the list
+    listOfCommands.push_back(cmd);
+  }
+
+>>>>>>> c6ddbd7 (Engine.cpp ne compile pas)
   // Setters and Getters
   // You can add setters and getters for other attributes as needed
 
