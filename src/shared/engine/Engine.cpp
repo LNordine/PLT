@@ -1,5 +1,6 @@
 // Engine.cpp
 #include "Engine.h"
+#include "Command.h"
 
 
 #include "Command.h"
@@ -35,8 +36,16 @@ namespace engine {
   // Add a command to the list of commands
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   void Engine::addCommand (std::unique_ptr<Command> cmd){
+=======
+  void Engine::addCommand (std::unique_ptr<Command> cmd){
+
+    listOfCommands.push_back(std::move(cmd));
+
+  }
+>>>>>>> 20f2d65 (MERCILESPTR)
 
     listOfCommands.push_back(std::move(cmd));
 
