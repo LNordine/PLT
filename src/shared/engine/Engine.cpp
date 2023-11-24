@@ -34,6 +34,7 @@ namespace engine {
 
   // Add a command to the list of commands
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   void Engine::addCommand (std::unique_ptr<Command> cmd){
 
@@ -54,6 +55,9 @@ namespace engine {
     // Add the unique command to the list
     listOfCommands.push_back(cmd);
   }
+=======
+  void addCommand (std::vector<std::unique_ptr<Command>> cmd){}
+>>>>>>> 6cf1432 (ComprendsRien)
 
 >>>>>>> c6ddbd7 (Engine.cpp ne compile pas)
   // Setters and Getters
