@@ -57,6 +57,7 @@ int main(int argc, char *argv[]) {
 
         
         else if (std::strcmp(argv[1], "engine") == 0) {
+<<<<<<< HEAD
             GameState gameState=generateSampleState();
             engine::Engine gameEngine(gameState);
             
@@ -85,6 +86,9 @@ int main(int argc, char *argv[]) {
             gameEngine.executeAllCommands(gameState);
 
             displayState(gameState);
+=======
+            
+>>>>>>> 974777d (Engine.dia cohérent)
            
         }
 

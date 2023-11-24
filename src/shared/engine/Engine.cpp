@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Engine.cpp
 // Engine.cpp
 #include "Engine.h"
@@ -50,3 +51,7 @@ namespace engine {
   // You can add setters and getters for other attributes as needed
 
 } // namespace engine
+=======
+#include "Engine.h"
+
+>>>>>>> 974777d (Engine.dia cohérent)
