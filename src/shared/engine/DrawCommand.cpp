@@ -4,12 +4,16 @@
 namespace engine {
 
   // Constructor
+<<<<<<< HEAD
   DrawCommand::DrawCommand(state::PlayerId authorPlayer, state::PlayerId targetPlayer, int nbOfCards) {
 
     this->authorPlayer = authorPlayer;
     this->targetPlayer = authorPlayer;
     this->nbOfCards = nbOfCards;
 
+=======
+  DrawCommand::DrawCommand(state::PlayerId authorPlayer, int nbOfCards) : nbOfCards(nbOfCards) {
+>>>>>>> 3fdc9bc (engine tries)
   }
 
   // Destructor

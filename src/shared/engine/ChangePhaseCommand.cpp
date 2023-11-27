@@ -4,8 +4,13 @@
 namespace engine {
 
   // Constructor
+<<<<<<< HEAD
   ChangePhaseCommand::ChangePhaseCommand(state::PlayerId authorPlayer, state::Phase phase) {
     
+=======
+  ChangePhaseCommand::ChangePhaseCommand(state::Phase phase, state::PlayerId authorPlayer) {
+
+>>>>>>> 3fdc9bc (engine tries)
   }
 
   // Destructor

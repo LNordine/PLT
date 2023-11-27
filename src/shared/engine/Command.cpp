@@ -4,8 +4,12 @@
 namespace engine {
 
   // Constructor
+<<<<<<< HEAD
   Command::Command() {
     // Initialize attributes as needed
+=======
+  Command<T>::Command() {
+>>>>>>> 3fdc9bc (engine tries)
   }
   // Destructor
   Command::~Command() {}

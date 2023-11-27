@@ -5,11 +5,15 @@
 namespace engine {
 
   // Constructor
+<<<<<<< HEAD
   BuildCommand::BuildCommand(state::PlayerId authorPlayer, state::Card *card) : engine::Command(){
     this->authorPlayer = authorPlayer;
     this->targetPlayer = authorPlayer;
     this->card = card;
   }
+=======
+  BuildCommand::BuildCommand(state::PlayerId authorPlayer, state::Card card) {}
+>>>>>>> 3fdc9bc (engine tries)
 
   // Destructor
   BuildCommand::~BuildCommand() {
@@ -17,6 +21,7 @@ namespace engine {
 
   // Execute method
   void BuildCommand::execute(state::GameState state) {
+<<<<<<< HEAD
     // Getting the player to execute the command on
     state::Player player = state.getPlayer(authorPlayer);
     
@@ -52,6 +57,9 @@ namespace engine {
     player.setBoardOfPlayer(board);
     player.setHand(hand);
     player.setNumberOfCoins(coins);
+=======
+    
+>>>>>>> 3fdc9bc (engine tries)
   }
 
 

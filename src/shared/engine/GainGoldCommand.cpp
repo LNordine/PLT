@@ -6,7 +6,13 @@
 namespace engine {
 
   // Constructor
+<<<<<<< HEAD
   GainGoldCommand::GainGoldCommand(state::PlayerId authorPlayer,int nbOfGolds) : Command(){
+=======
+  Gain2GoldCommand::Gain2GoldCommand(state::PlayerId authorPlayer,int nbOfGolds) : Command(){
+    this->playing=playing;
+    this->nbOfGolds=nbOfGolds;
+>>>>>>> 3fdc9bc (engine tries)
   }
 
   // Destructor

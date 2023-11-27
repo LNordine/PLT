@@ -131,6 +131,7 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
+<<<<<<< HEAD
         <dia:point val="14.3137,-8.16352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -142,16 +143,29 @@
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="14.3137,-8.16352"/>
+=======
+        <dia:point val="14.3137,-7.36352"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="14.2637,-7.41352;36.8087,8.88648"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="14.3137,-7.36352"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="22.445"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:real val="16.200000000000003"/>
 =======
         <dia:real val="15.4"/>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+        <dia:real val="16.200000000000003"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#GameState#</dia:string>
@@ -342,6 +356,7 @@
           </dia:attribute>
           <dia:attribute name="type">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <dia:string>#PlayerId#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
@@ -369,6 +384,9 @@
 =======
             <dia:string>#Playing#</dia:string>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+            <dia:string>#PlayerId#</dia:string>
+>>>>>>> 3fdc9bc (engine tries)
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
@@ -2827,6 +2845,7 @@
     </dia:object>
     <dia:object type="UML - Association" version="2" id="O9">
       <dia:attribute name="obj_pos">
+<<<<<<< HEAD
         <dia:point val="14.3137,-5.46352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -2835,15 +2854,28 @@
 =======
         <dia:rectangle val="5.7633,-3.31352;14.9137,9.44"/>
 >>>>>>> f8eb613 (fixing query methods)
+=======
+        <dia:point val="14.3137,-3.86352"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="5.7633,-4.61352;15.0637,9.44"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
+<<<<<<< HEAD
         <dia:point val="14.3137,-5.46352"/>
         <dia:point val="9.7135,-5.46352"/>
         <dia:point val="9.7135,9.385"/>
         <dia:point val="5.8133,9.385"/>
+=======
+        <dia:point val="14.3137,-3.86352"/>
+        <dia:point val="9.7135,-3.86352"/>
+        <dia:point val="9.7135,8.585"/>
+        <dia:point val="5.8133,8.585"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -3124,12 +3156,17 @@
     <dia:object type="UML - Association" version="2" id="O11">
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="36.809,-0.06352"/>
 =======
         <dia:point val="36.659,1.63648"/>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+        <dia:point val="36.809,0.73648"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="obj_bb">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3140,6 +3177,8 @@
 =======
 =======
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+>>>>>>> 3fdc9bc (engine tries)
         <dia:rectangle val="35.909,0.48648;40.5996,2.93"/>
 =======
         <dia:rectangle val="35.909,0.48648;40.5996,3.33"/>
@@ -3150,12 +3189,19 @@
 =======
         <dia:rectangle val="35.909,0.88648;40.5996,3.33"/>
 >>>>>>> d87734e (Engine.dia cohérent)
+<<<<<<< HEAD
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+=======
+        <dia:rectangle val="36.059,-0.01352;40.5996,3.33"/>
+>>>>>>> c1f6e57 (engine tries)
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <dia:point val="36.809,-0.06352"/>
@@ -3170,6 +3216,11 @@
         <dia:point val="38.9543,1.63648"/>
 >>>>>>> 974777d (Engine.dia cohérent)
         <dia:point val="38.9543,2.475"/>
+=======
+        <dia:point val="36.809,0.73648"/>
+        <dia:point val="39.0293,0.73648"/>
+        <dia:point val="39.0293,2.475"/>
+>>>>>>> 3fdc9bc (engine tries)
         <dia:point val="40.5496,2.475"/>
 >>>>>>> 814beb0 (Engine et state DIA)
       </dia:attribute>
@@ -3235,6 +3286,7 @@
       <dia:connections>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:connection handle="0" to="O1" connection="44"/>
 =======
         <dia:connection handle="0" to="O1" connection="40"/>
@@ -3242,6 +3294,9 @@
 =======
         <dia:connection handle="0" to="O1" connection="42"/>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+        <dia:connection handle="0" to="O1" connection="44"/>
+>>>>>>> 3fdc9bc (engine tries)
         <dia:connection handle="1" to="O10" connection="16"/>
       </dia:connections>
       <dia:childnode parent="O0"/>
@@ -3560,6 +3615,7 @@
     <dia:object type="UML - Dependency" version="1" id="O14">
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="14.3137,-1.26352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -3574,11 +3630,18 @@
       <dia:attribute name="obj_bb">
         <dia:rectangle val="-0.974611,-0.4;14.2137,1.29824"/>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+        <dia:point val="14.3137,-0.46352"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.974611,-0.95176;14.3637,0.64824"/>
+>>>>>>> 3fdc9bc (engine tries)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <dia:point val="14.3137,-1.26352"/>
         <dia:point val="7.09454,-1.26352"/>
@@ -3588,6 +3651,11 @@
         <dia:point val="14.1637,0.83648"/>
         <dia:point val="7.01954,0.83648"/>
         <dia:point val="7.01954,0.05"/>
+=======
+        <dia:point val="14.3137,-0.46352"/>
+        <dia:point val="7.09454,-0.46352"/>
+        <dia:point val="7.09454,0.05"/>
+>>>>>>> 3fdc9bc (engine tries)
         <dia:point val="-0.524611,0.05"/>
 >>>>>>> 974777d (Engine.dia cohérent)
       </dia:attribute>
@@ -3838,18 +3906,18 @@
     </dia:object>
     <dia:object type="UML - Dependency" version="1" id="O16">
       <dia:attribute name="obj_pos">
-        <dia:point val="14.1637,3.23648"/>
+        <dia:point val="14.3137,1.93648"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="7.67549,-4.5375;14.2137,3.28648"/>
+        <dia:rectangle val="7.67549,-4.5375;14.3637,1.98648"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="14.1637,3.23648"/>
-        <dia:point val="11.3446,3.23648"/>
-        <dia:point val="11.3446,-4.0875"/>
+        <dia:point val="14.3137,1.93648"/>
+        <dia:point val="11.4196,1.93648"/>
+        <dia:point val="11.4196,-4.0875"/>
         <dia:point val="8.12549,-4.0875"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
