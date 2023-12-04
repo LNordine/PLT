@@ -8,11 +8,23 @@ namespace state {
         return this->listOfPlayers;
     }
 
+<<<<<<< HEAD
+=======
+    int GameState::getNbCardToDraw () const{
+        return this->nbOfCardToDraw;
+    }
+
+
+    void GameState::setNbCardToDraw (int nbCard){
+        this->nbOfCardToDraw = nbCard;
+    }
+
+>>>>>>> f8eb613 (fixing query methods)
     void GameState::setCurrentCharacter(CharacterType character) {
         this->currentCharacter=character;
     }
 
-    CharacterType GameState::getCurrentCharacter() {
+    CharacterType GameState::getCurrentCharacter() const{
         return this->currentCharacter;
     }
 
@@ -38,7 +50,11 @@ namespace state {
         }
     }
 
+<<<<<<< HEAD
     Phase GameState::getGamePhase() {
+=======
+    GamePhase GameState::getGamePhase() const{
+>>>>>>> f8eb613 (fixing query methods)
         return this->gamePhase;
     }
 
@@ -46,7 +62,7 @@ namespace state {
         this->gamePhase=Phase::ENDGAME;
     }
 
-    PlayerId GameState::getCrownOwner() {
+    PlayerId GameState::getCrownOwner() const{
         return this->crownOwner;
     }
 
