@@ -29,9 +29,12 @@ namespace engine {
     std::vector<state::Card> hand = player.getHand();
 
     // Adding the new cards to the player's hand
+<<<<<<< HEAD
     for (int i=0; i< nbOfCards; i++){
       //hand.push_back(gameState.)
     }
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
 
     // Setting the player's new hand
     player.setHand(hand);

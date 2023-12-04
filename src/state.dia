@@ -132,6 +132,7 @@
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="14.3137,-8.16352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -145,13 +146,20 @@
         <dia:point val="14.3137,-8.16352"/>
 =======
         <dia:point val="14.3137,-7.36352"/>
+=======
+        <dia:point val="14.3137,-8.16352"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="14.2637,-7.41352;36.8087,8.88648"/>
+        <dia:rectangle val="14.2637,-8.21352;36.8087,8.08648"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
+<<<<<<< HEAD
         <dia:point val="14.3137,-7.36352"/>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+        <dia:point val="14.3137,-8.16352"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="22.445"/>
@@ -381,12 +389,15 @@
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#std::vector&lt;Card&gt;#</dia:string>
+<<<<<<< HEAD
 =======
             <dia:string>#Playing#</dia:string>
 >>>>>>> 974777d (Engine.dia cohérent)
 =======
             <dia:string>#PlayerId#</dia:string>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
@@ -487,7 +498,10 @@
         <dia:composite type="umloperation">
           <dia:attribute name="name">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
             <dia:string>#getNbCardToDraw#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
@@ -518,7 +532,12 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
+<<<<<<< HEAD
 >>>>>>> f8eb613 (fixing query methods)
+=======
+=======
+>>>>>>> 81887eb (Beginning of DrawCommand, adding the stack to the gamestate)
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
             <dia:string>#getCrownOwner#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
@@ -861,13 +880,21 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
+<<<<<<< HEAD
             <dia:string>#setStack#</dia:string>
+=======
+            <dia:string>#initStack#</dia:string>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
+<<<<<<< HEAD
             <dia:string>#void#</dia:string>
+=======
+            <dia:string>#std::vector&lt;Card&gt;#</dia:string>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -887,6 +914,7 @@
           <dia:attribute name="class_scope">
             <dia:boolean val="false"/>
           </dia:attribute>
+<<<<<<< HEAD
           <dia:attribute name="parameters">
             <dia:composite type="umlparameter">
               <dia:attribute name="name">
@@ -906,6 +934,9 @@
               </dia:attribute>
             </dia:composite>
           </dia:attribute>
+=======
+          <dia:attribute name="parameters"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
         </dia:composite>
       </dia:attribute>
       <dia:attribute name="template">
@@ -2846,6 +2877,7 @@
     <dia:object type="UML - Association" version="2" id="O9">
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="14.3137,-5.46352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -2860,22 +2892,34 @@
       <dia:attribute name="obj_bb">
         <dia:rectangle val="5.7633,-4.61352;15.0637,9.44"/>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+        <dia:point val="14.3137,-5.46352"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="5.7633,-6.21352;15.0637,10.24"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
         <dia:point val="14.3137,-5.46352"/>
         <dia:point val="9.7135,-5.46352"/>
         <dia:point val="9.7135,9.385"/>
         <dia:point val="5.8133,9.385"/>
+<<<<<<< HEAD
 =======
         <dia:point val="14.3137,-3.86352"/>
         <dia:point val="9.7135,-3.86352"/>
         <dia:point val="9.7135,8.585"/>
         <dia:point val="5.8133,8.585"/>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -2948,10 +2992,14 @@
       </dia:attribute>
       <dia:attribute name="obj_bb">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:rectangle val="40.45,-2.475;47.2103,3.225"/>
 =======
         <dia:rectangle val="40.55,-0.375;47.3103,5.325"/>
 >>>>>>> 814beb0 (Engine et state DIA)
+=======
+        <dia:rectangle val="40.45,-2.475;47.2103,3.225"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="40.5,-2.425"/>
@@ -3157,6 +3205,7 @@
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="36.809,-0.06352"/>
 =======
         <dia:point val="36.659,1.63648"/>
@@ -3164,8 +3213,12 @@
 =======
         <dia:point val="36.809,0.73648"/>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+        <dia:point val="36.809,-0.06352"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="obj_bb">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3179,6 +3232,8 @@
 >>>>>>> 974777d (Engine.dia cohérent)
 =======
 >>>>>>> 3fdc9bc (engine tries)
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
         <dia:rectangle val="35.909,0.48648;40.5996,2.93"/>
 =======
         <dia:rectangle val="35.909,0.48648;40.5996,3.33"/>
@@ -3195,7 +3250,13 @@
 =======
         <dia:rectangle val="36.059,-0.01352;40.5996,3.33"/>
 >>>>>>> c1f6e57 (engine tries)
+<<<<<<< HEAD
 >>>>>>> 3fdc9bc (engine tries)
+=======
+=======
+        <dia:rectangle val="36.059,-0.81352;40.4996,1.23"/>
+>>>>>>> 81887eb (Beginning of DrawCommand, adding the stack to the gamestate)
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -3204,10 +3265,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
         <dia:point val="36.809,-0.06352"/>
         <dia:point val="38.9793,-0.06352"/>
         <dia:point val="38.9793,0.375"/>
         <dia:point val="40.4496,0.375"/>
+<<<<<<< HEAD
 =======
         <dia:point val="36.659,1.23648"/>
         <dia:point val="38.9543,1.23648"/>
@@ -3223,6 +3288,8 @@
 >>>>>>> 3fdc9bc (engine tries)
         <dia:point val="40.5496,2.475"/>
 >>>>>>> 814beb0 (Engine et state DIA)
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -3616,6 +3683,7 @@
       <dia:attribute name="obj_pos">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dia:point val="14.3137,-1.26352"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
@@ -3636,6 +3704,12 @@
       <dia:attribute name="obj_bb">
         <dia:rectangle val="-0.974611,-0.95176;14.3637,0.64824"/>
 >>>>>>> 3fdc9bc (engine tries)
+=======
+        <dia:point val="14.3137,-1.26352"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.974611,-1.60176;14.3637,3.33067e-16"/>
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -3643,10 +3717,14 @@
       <dia:attribute name="orth_points">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
         <dia:point val="14.3137,-1.26352"/>
         <dia:point val="7.09454,-1.26352"/>
         <dia:point val="7.09454,-0.45"/>
         <dia:point val="-0.524611,-0.45"/>
+<<<<<<< HEAD
 =======
         <dia:point val="14.1637,0.83648"/>
         <dia:point val="7.01954,0.83648"/>
@@ -3658,6 +3736,8 @@
 >>>>>>> 3fdc9bc (engine tries)
         <dia:point val="-0.524611,0.05"/>
 >>>>>>> 974777d (Engine.dia cohérent)
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>

@@ -9,7 +9,10 @@ namespace state {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
     int GameState::getNbCardToDraw () const{
         return this->nbOfCardToDraw;
     }
@@ -19,7 +22,12 @@ namespace state {
         this->nbOfCardToDraw = nbCard;
     }
 
+<<<<<<< HEAD
 >>>>>>> f8eb613 (fixing query methods)
+=======
+=======
+>>>>>>> 81887eb (Beginning of DrawCommand, adding the stack to the gamestate)
+>>>>>>> a82536c (Beginning of DrawCommand, adding the stack to the gamestate)
     void GameState::setCurrentCharacter(CharacterType character) {
         this->currentCharacter=character;
     }
