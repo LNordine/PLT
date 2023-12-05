@@ -5,7 +5,7 @@ namespace engine {
 
   // Constructor
   ChangePhaseCommand::ChangePhaseCommand(state::PlayerId authorPlayer, state::Phase phase) {
-
+    
   }
 
   // Destructor
