@@ -85,8 +85,6 @@ int main(int argc, char *argv[]) {
             gameEngine.executeAllCommands(gameState);
 
             displayState(gameState);
-
-
            
         }
 
@@ -98,6 +96,7 @@ int main(int argc, char *argv[]) {
     }
     return 1;
 }
+
 
 void test(){
     Card card {"card1", CardType::Military, 2};

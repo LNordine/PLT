@@ -5,6 +5,11 @@ namespace engine {
 
   // Constructor
   DrawCommand::DrawCommand(state::PlayerId authorPlayer, state::PlayerId targetPlayer, int nbOfCards) {
+
+    this->authorPlayer = authorPlayer;
+    this->targetPlayer = authorPlayer;
+    this->nbOfCards = nbOfCards;
+
   }
 
   // Destructor
@@ -20,6 +25,9 @@ namespace engine {
     std::vector<state::Card> hand = player.getHand();
 
     // Adding the new cards to the player's hand
+    for (int i=0; i< nbOfCards; i++){
+      //hand.push_back(gameState.)
+    }
 
     // Setting the player's new hand
     player.setHand(hand);
