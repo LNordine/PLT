@@ -204,5 +204,186 @@ BOOST_FIXTURE_TEST_SUITE(CommandTestCase, F)
         
     }
 
+
+
+    BOOST_AUTO_TEST_CASE(ChangePhaseCHOOSEtoCALL) {
+    // Création d'une instance de ChangePhaseCommand
+    gameState.setGamePhase(state::Phase::CHOOSE_CHARACTER);
+    engine::ChangePhaseCommand command(state::PlayerId::PLAYER_A, state::Phase::CHOOSE_CHARACTER);
+
+    // Vérification des propriétés après la création
+    BOOST_CHECK_EQUAL(gameState.getGamePhase(), state::Phase::CHOOSE_CHARACTER);
+    BOOST_CHECK_EQUAL(command.getCommandTypeId(), engine::CommandTypeId::SWITCH_PHASE);
+
+    // Exécution de la commande
+    command.execute(gameState);
+
+    // Vérification que la phase a été changée correctement
+    BOOST_CHECK_EQUAL(gameState.getGamePhase(), state::Phase::CALL_CHARACTER);
+}
+
+    BOOST_AUTO_TEST_CASE(ChangePhaseToEndGame) {
+    // Création d'une instance de ChangePhaseCommand
+    gameState.setGamePhase(state::Phase::CALL_CHARACTER);
+    gameState.setPlaying(state::PlayerId::PLAYER_A);
+    engine::ChangePhaseCommand command(state::PlayerId::PLAYER_A, state::Phase::CALL_CHARACTER);
+
+    state::Player playerA = gameState.getPlayer(state::PlayerId::PLAYER_A);
+    state::Card cardWonder{"22", state::CardType::WONDER, 5};
+    playerA.setBoardOfPlayer({cardWonder,cardWonder,cardWonder,cardWonder,cardWonder,cardWonder,cardWonder,cardWonder});
+    gameState.updatePlayer(playerA);
+
+    // Exécution de la commande
+    command.execute(gameState);
+
+    // Vérification que la phase a été changée correctement
+    BOOST_CHECK_EQUAL(gameState.getGamePhase(), state::Phase::END_GAME);
+}
+
+//TEST Claim building command
+BOOST_AUTO_TEST_CASE(ClaimBuildingCommand) {
+
+    gameState.setPlaying(state::PlayerId::PLAYER_A);
+
+    // Création d'une instance de ClaimBuildingGold
+    engine::ClaimBuildingGold command(state::PlayerId::PLAYER_A);
+
+    // Vérification des propriétés après la création
+    BOOST_CHECK_EQUAL(command.getCommandTypeId(), engine::CommandTypeId::CLAIM_BUILDING_GOLD);
+
+    // Exécution de la commande
+    command.execute(gameState);
+
+    // Vérification que le nombre de pièces du joueur a été mis à jour correctement
+    state::Player playerA = gameState.getPlayer(state::PlayerId::PLAYER_A);
+    playerA.setCharacter(state::CharacterType::WARLORD);
+    BOOST_CHECK_EQUAL(playerA.getNumberOfCoins(), 2);  // Aucune carte sur le plateau, aucune pièce gagnée
+
+    // Ajout de cartes au joueur pour simuler une condition
+    playerA.setBoardOfPlayer({{"1", state::CardType::MILITARY, 2}, {"2", state::CardType::MILITARY, 3}});
+    gameState.updatePlayer(playerA);
+
+    // Exécution de la commande après ajout de cartes
+    command.execute(gameState);
+    
+
+    // Vérification que le nombre de pièces du joueur a été mis à jour correctement
+    BOOST_CHECK_EQUAL(gameState.getPlayer(state::PlayerId::PLAYER_A).getNumberOfCoins(), 4);  // 2 cartes MILITARY avec un total de 2+2=4 pièces d'or
+}
+
+
+//TEST DrawCommand
+BOOST_AUTO_TEST_CASE(ConstructionAndExecution) {
+    // Création d'une instance de DrawCommand
+    engine::DrawCommand command(state::PlayerId::PLAYER_A);
+
+    gameState.setPlaying(state::PlayerId::PLAYER_A);
+
+    // Vérification des propriétés après la création
+    BOOST_CHECK_EQUAL(command.getCommandTypeId(), engine::CommandTypeId::DRAW_CARD);
+
+    // Création d'un stack avec suffisamment de cartes
+    gameState.setStack(StackUtils::initStack());
+
+    // Ajout d'une carte "22" (Observatory) à la board du joueur A
+    state::Player playerA = gameState.getPlayer(state::PlayerId::PLAYER_A);
+    playerA.setHand({});//Hand vide
+    playerA.setBoardOfPlayer({{"22", state::CardType::WONDER, 5}});
+    gameState.updatePlayer(playerA);
+
+    // Exécution de la commande
+    command.execute(gameState);
+
+    // Vérification que la phase du jeu a été changée à Draft
+    BOOST_CHECK_EQUAL(gameState.getSubPhase(), state::SubPhase::Draft);
+
+    std::vector<state::Card> drawableCards = gameState.getDrawableCards();
+    
+    state::Card card0=drawableCards[0];
+    state::Card card1=drawableCards[1];
+    state::Card card2=drawableCards[2];
+
+    //appel de choosecardCommand
+    engine::ChooseCardCommand chooseCommand1(state::PlayerId::PLAYER_A, card0);
+    chooseCommand1.execute(gameState);
+    Engine::getInstance(gameState).executeAllCommands();
+    //on pioche une carte les options de draw se réduisent de 1
+    BOOST_CHECK_EQUAL(gameState.getDrawableCards().size(),2);
+    BOOST_CHECK_EQUAL(gameState.getPlayer(state::PlayerId::PLAYER_A).getHand().size(),1);
+    engine::ChooseCardCommand chooseCommnd2(state::PlayerId::PLAYER_A, card1);
+    chooseCommnd2.execute(gameState);
+    Engine::getInstance(gameState).executeAllCommands();
+    BOOST_CHECK_EQUAL(gameState.getPlayer(state::PlayerId::PLAYER_A).getHand().size(),2);
+
+
+}
+BOOST_AUTO_TEST_CASE(DefaultDraw) {
+    // Création d'une instance de DrawCommand
+    engine::DrawCommand command(state::PlayerId::PLAYER_A);
+    gameState.setPlaying(state::PlayerId::PLAYER_A);
+
+    // Vérification des propriétés après la création
+    BOOST_CHECK_EQUAL(command.getCommandTypeId(), engine::CommandTypeId::DRAW_CARD);
+
+    // Création d'un stack avec suffisamment de cartes
+    gameState.setStack(StackUtils::initStack());
+
+    // Ajout d'une carte "22" (Observatory) à la board du joueur A
+    state::Player playerA = gameState.getPlayer(state::PlayerId::PLAYER_A);
+    playerA.setHand({});//Hand vide
+    playerA.setBoardOfPlayer({{}});
+    gameState.updatePlayer(playerA);
+
+    // Exécution de la commande
+    command.execute(gameState);
+
+    // Vérification que la phase du jeu a été changée à Draft
+    BOOST_CHECK_EQUAL(gameState.getSubPhase(), state::SubPhase::Draft);
+    std::vector<state::Card> drawableCards = gameState.getDrawableCards();
+    state::Card card0=drawableCards[0];
+    //appel de choosecardCommand
+    engine::ChooseCardCommand chooseCommand1(state::PlayerId::PLAYER_A, card0);
+    chooseCommand1.execute(gameState);
+    Engine::getInstance(gameState).executeAllCommands();
+    //on pioche une carte les options de draw se réduisent de 1
+    BOOST_CHECK_EQUAL(gameState.getPlayer(state::PlayerId::PLAYER_A).getHand().size(),1); 
+}
+
+//Test gainGold command
+// Test case for the execute method
+BOOST_AUTO_TEST_CASE(GainGoldCommandTest1) {
+    
+    engine::GainGoldCommand gainGoldCommand(state::PlayerId::PLAYER_A, 5);
+    
+    gainGoldCommand.execute(gameState);
+
+    // Add assertions to check if the execution had the desired effect on the game state
+    state::Player player = gameState.getPlayer(state::PlayerId::PLAYER_A);
+
+    BOOST_CHECK_EQUAL(player.getNumberOfCoins(), 7); // Assuming the initial number of coins was 0
+    BOOST_CHECK(!player.isDrawAvailable());  // Assuming the draw availability is set to false in execute
+}
+
+BOOST_AUTO_TEST_CASE(ExecuteTestStartGame) {
+    
+    engine::StartGameCommand startGameCommand(state::PlayerId::PLAYER_A);
+    
+    startGameCommand.execute(gameState);
+
+    // Add assertions to check if the execution had the desired effect on the game state
+    BOOST_CHECK_EQUAL(gameState.getCurrentCharacter(), state::CharacterType::NO_CHARACTER);
+    BOOST_CHECK_EQUAL(gameState.getCrownOwner(), state::PlayerId::PLAYER_A);
+    BOOST_CHECK_EQUAL(gameState.getPlaying(), state::PlayerId::PLAYER_A);
+    BOOST_CHECK_EQUAL(gameState.getKilledCharacter(), state::CharacterType::NO_CHARACTER);
+    BOOST_CHECK_EQUAL(gameState.getRobbedCharacter(), state::CharacterType::NO_CHARACTER);
+    BOOST_CHECK_EQUAL(gameState.getGamePhase(), state::Phase::CHOOSE_CHARACTER);
+}
+
+
+
+
+
+
+
 BOOST_AUTO_TEST_SUITE_END()
 
