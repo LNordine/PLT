@@ -1,5 +1,6 @@
 // ChooseCharacterCommand.cpp
 #include "ChooseCharacterCommand.h"
+#include "EndOfTurnCommand.h"
 #include "algorithm"
 
 using namespace engine;
@@ -31,6 +32,11 @@ void ChooseCharacterCommand::execute(state::GameState &state) {
     //update the state
     state.setAvailableCharacter(availableCharacters);
     state.updatePlayer(player);
+    auto *command = new EndOfTurnCommand(authorPlayer);
+    if (command->check(state)){
+        command->execute(state);
+    }
+    delete command;
 }
 
 // Check method
